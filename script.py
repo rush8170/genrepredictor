@@ -14,7 +14,7 @@ def result(to_predict):
     corpus = []
     dataset = pd.read_csv('dataset.tsv',delimiter='\t',quoting = 3, names = ['id','summary','name','genre'],nrows=1001)
     #dataset.to_csv('dataset1.tsv',sep='\t',encoding='utf-8')
-    const=400
+    const=10
     y_corpus = []
     #print(dataset)
     for i in range(const):
