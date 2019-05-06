@@ -14,7 +14,7 @@ def result(to_predict):
     corpus = []
     dataset = pd.read_csv('dataset.tsv',delimiter='\t',quoting = 3, names = ['id','summary','name','genre'],nrows=1001)
     #dataset.to_csv('dataset1.tsv',sep='\t',encoding='utf-8')
-    const=10
+    const=40
     y_corpus = []
     #print(dataset)
     for i in range(const):
@@ -66,10 +66,10 @@ def result(to_predict):
 @app.route('/result',methods=['POST'])
 def res():
     if(request.method=='POST'):
-        print("post request")
+        #print("post request")
         plot1 = request.form
         plot = plot1['plot']
-        print(plot1['plot'])
+        #print(plot1['plot'])
         plot = plot1['plot']
         review = re.sub('[^a-zA-Z]', ' ', plot)
         review = review.lower()
